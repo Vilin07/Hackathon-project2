@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rural Women Online</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+  <div class="navbar">
+    <ul>
+      <li id="home"><a href="#">HOME</a></li>
+      <li id="about"><a href="#">ABOUT</a></li>
+      <li id="programs"><a href="#">PROGRAMS</a></li>
+      <li id="gi"><a href="#">GET INVOLVED</a></li>
+      <li id="cu"><a href="#">CONTACT US</a></li>
+    </ul>
+  </div>
+  <header>
+  <div class="container">
+    <div class="hero-sec">
+      
+      <img src="hero3.png" alt="Hero Image" class="hero-img">
+
+      <div class="hero-overlay">
+        <h1>Educate Her. <br>
+         Empower Her. Elevate All.</h1>
+      </div>
+  
+      <div class="main-logo">
+        <img src="mainlogo3.png" alt="SAKHI" class="logo">
+      </div>
+      <div class="social-logo">
+        
+        <a class="insta" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a class="linkedin" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+        
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(); 
+  </script>
+  <script>
+    firebase.initializeApp({
+      apiKey: "AIzaSyB04ab3r-h3sX6qtyeTbm0yI_X1s6yERiw",
+      authDomain: "hackathon2-9af58.firebaseapp.com",
+      projectId: "hackathon2-9af58"
+    });
+  
+    firebase.auth().onAuthStateChanged((user) => {
+      if (!user) {
+        alert("You must be logged in to access this page.");
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+  
+</body>
+
+</html>
