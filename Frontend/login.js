@@ -1,3 +1,7 @@
+
+// Updated Firebase Auth & Firestore setup
+// Handles Login, Register, Google Auth, and Firestore user data storage
+
 // Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyB04ab3r-h3sX6qtyeTbm0yI_X1s6yERiw",
@@ -42,7 +46,7 @@ loginForm.addEventListener('submit', (e) => {
   auth.signInWithEmailAndPassword(email, password)
     .then(() => {
       alert("Login successful!");
-      window.location.href = "main.html"; // 🔁 Redirect after login
+      window.location.href = "main.html"; // Redirect after login
     })
     .catch((error) => alert(error.message));
 });
@@ -71,32 +75,35 @@ registerForm.addEventListener('submit', (e) => {
     })
     .then(() => {
       alert("Registration successful and user data saved!");
-      window.location.href = "main.html"; // 🔁 Redirect after registration
+      window.location.href = "main.html"; // Redirect after registration
     })
     .catch((error) => alert(error.message));
 });
 
 // Google Login
-document.getElementById('googleLogin').addEventListener('click', () => {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  auth.signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
-      const userRef = db.collection("users").doc(user.uid);
-      return userRef.get().then(doc => {
-        if (!doc.exists) {
-          return userRef.set({
-            uid: user.uid,
-            name: user.displayName,
-            email: user.email,
-            createdAt: firebase.firestore.FieldValue.serverTimestamp()
-          });
-        }
-      });
-    })
-    .then(() => {
-      alert("Logged in with Google!");
-      window.location.href = "main.html"; // 🔁 Redirect after Google login
-    })
-    .catch((error) => alert(error.message));
-});
+const googleLoginBtn = document.getElementById('googleLogin');
+if (googleLoginBtn) {
+  googleLoginBtn.addEventListener('click', () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user;
+        const userRef = db.collection("users").doc(user.uid);
+        return userRef.get().then(doc => {
+          if (!doc.exists) {
+            return userRef.set({
+              uid: user.uid,
+              name: user.displayName,
+              email: user.email,
+              createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
+          }
+        });
+      })
+      .then(() => {
+        alert("Logged in with Google!");
+        window.location.href = "main.html"; // Redirect after Google login
+      })
+      .catch((error) => alert(error.message));
+  });
+}

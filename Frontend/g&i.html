@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Involved - Rural Girls Empowerment</title>
+  <link rel="stylesheet" href="g&i.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Get Involved</h2>
+    <form id="involve-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <select id="interest" required>
+        <option value="">Select Interest Area</option>
+        <option value="volunteering">Volunteering</option>
+        <option value="donation">Donation</option>
+        <option value="mentorship">Mentorship</option>
+      </select>
+      <textarea id="message" placeholder="Your Message or Ideas..." rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="form-status"></p>
+  </div>
+
+  <script type="module" src="g&i.js"></script>
+</body>
+</html>

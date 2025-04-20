@@ -15,7 +15,7 @@ async function sendMessage() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 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"
+        "Authorization": "Bearer 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"
       },
       body: JSON.stringify({
         model: "mistralai/mistral-7b-instruct",
