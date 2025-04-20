@@ -157,6 +157,7 @@ footer {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
   margin: 10px;
+  margin-right: 160px;
 }
 
 
