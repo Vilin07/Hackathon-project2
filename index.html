@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auth Page</title>
+  <link rel="stylesheet" href="login.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Firebase Compat SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="toggle-buttons">
+      <button id="showLogin" class="active">Login</button>
+      <button id="showRegister">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="form active">
+      <h1>Login</h1>
+      <div class="inputbox">
+        <input type="email" placeholder="Email" id="loginEmail" required>
+        <i class='bx bx-envelope'></i>
+      </div>
+      <div class="inputbox">
+        <input type="password" placeholder="Password" id="loginPassword" required>
+        <i class='bx bxs-lock'></i>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <div style="text-align: center; margin-top: 15px;">
+        <button type="button" class="btn" id="googleLogin">Login with Google</button>
+      </div>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="form">
+      <h1>Register</h1>
+      <div class="inputbox">
+        <input type="text" placeholder="Full Name" id="regName" required>
+        <i class='bx bx-user'></i>
+      </div>
+      <div class="inputbox">
+        <input type="email" placeholder="Email" id="regEmail" required>
+        <i class='bx bx-envelope'></i>
+      </div>
+      <div class="inputbox">
+        <input type="password" placeholder="Create Password" id="regPassword" required>
+        <i class='bx bxs-lock'></i>
+      </div>
+      <div class="inputbox">
+        <input type="password" placeholder="Confirm Password" id="regConfirmPassword" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

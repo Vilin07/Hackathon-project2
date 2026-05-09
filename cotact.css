@@ -1,0 +1,117 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff0f6;
+    color: #2d2d2d;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #ef39f2, #a29bfe);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Contact Container */
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 10%;
+    gap: 40px;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-info h2 {
+    font-size: 2rem;
+    color: #d64edc;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Social Icons */
+  .social-icons a {
+    font-size: 1.8rem;
+    margin-right: 20px;
+    color: #d64edc;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ff9ae1;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #f9c2ff;
+    font-size: 1rem;
+    resize: none;
+    background-color: #fff7fb;
+  }
+  
+  .contact-form button {
+    padding: 12px 20px;
+    background-color: #ef39f2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #d32dc9;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      padding: 30px 20px;
+    }
+  
+    header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .social-icons a {
+      font-size: 1.5rem;
+    }
+  }
+  

@@ -1,0 +1,173 @@
+/* Success Stories */
+#success-stories {
+  background-color: #f5f5f5;
+  padding: 60px 20px;
+}
+
+#success-stories h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+#Lijjat {
+  margin-bottom: 60px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+#img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#h3 {
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+#p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 50px 20px 30px;
+}
+
+footer h3, footer h4 {
+  color: #fff;
+}
+
+footer p, footer a {
+  color: #ccc;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer input[type="email"] {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  width: 80%;
+  margin-top: 8px;
+}
+
+footer button {
+  padding: 8px 16px;
+  background-color: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+footer hr {
+  margin: 40px auto 20px;
+  border-color: #333;
+  width: 90%;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+#success-stories {
+  background: #f8f8f8;
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#success-stories h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #e91e63;
+}
+
+.success-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.success-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid #e91e63;
+}
+
+.success-card:hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(233,30,99,0.2) 0%, transparent 70%);
+  animation: pulse 2s infinite;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.success-card img.story-img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.success-card h3 {
+  color: #e91e63;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  z-index: 1;
+  position: relative;
+}
+
+.success-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  z-index: 1;
+  position: relative;
+}

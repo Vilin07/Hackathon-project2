@@ -1,0 +1,84 @@
+:root {
+    --primary-color: #f06292;
+    --secondary-color: #fce4ec;
+    --text-color: #333;
+    --bg-color: #fdf0f8;
+    --card-bg: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+  
+  header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+   
+  }
+  
+  section {
+    background-color: var(--card-bg);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid black;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  li {
+    margin-bottom: 0.6rem;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+  
+    section {
+      padding: 1.2rem 1rem;
+    }
+  }

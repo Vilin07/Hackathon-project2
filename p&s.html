@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protection & Safety</title>
+  <link rel="stylesheet" href="p&s.css">
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+
+  <!-- Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+  <div class="pns-container">
+    <h1>🛡️ Protection & Safety</h1>
+
+    <!-- SOS Emergency Button -->
+    <div class="sos-section">
+      <h2>🚨 SOS Emergency</h2>
+      <button id="sos-button">Trigger SOS</button>
+      <p id="sos-confirmation" style="display: none;">✅ SOS alert sent successfully!</p>
+      <!-- Loading indicator for SOS -->
+      <div id="loading-sos" style="display: none;">Sending SOS...</div>
+    </div>
+
+    <!-- Map -->
+    <div id="map" style="height: 300px; width: 100%; margin-top: 20px; border-radius: 8px;"></div>
+
+    <!-- Anonymous Report Form -->
+    <div class="report-section">
+      <h2>📝 Anonymous Report</h2>
+      <form id="report-form">
+        <textarea id="report-text" placeholder="Describe the issue..." required></textarea>
+        <button type="submit">Submit Report</button>
+        <p id="report-confirmation" style="display: none;">✅ Report submitted anonymously!</p>
+        <!-- Loading indicator for report submission -->
+        <div id="loading-report" style="display: none;">Submitting report...</div>
+      </form>
+    </div>
+  </div>
+
+  <script src="p&s.js"></script>
+</body>
+</html>
